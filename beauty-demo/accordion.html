@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			input[type="checkbox"] {
+				display: none;
+			}
+			.wrap-collabsible {
+				margin: 1.2rem 0;
+			}
+			.lbl-toggle {
+				display: block;
+				padding: 0 0 1rem 0.25rem;
+				cursor: pointer;
+				transition: all 0.25s ease-out;
+				border-bottom: 1px solid rgba(10, 10, 10, 0.25);
+			}
+			.lbl-toggle::before {
+				content: " ";
+				display: inline-block;
+				border-top: 0.5rem solid transparent;
+				border-bottom: 0.5rem solid transparent;
+				border-left: 0.5rem solid currentColor;
+				vertical-align: middle;
+				margin-right: 0.75rem;
+				transform: translateY(-0.1rem);
+				transition: transform 0.2s ease-out;
+			}
+			.toggle:checked + .lbl-toggle::before {
+				transform: rotate(90deg) translateX(-0.2rem);
+			}
+			.collapsible-content {
+				max-height: 0px;
+				overflow: hidden;
+				transition: max-height 0.25s ease-in-out;
+			}
+			.toggle:checked + .lbl-toggle + .collapsible-content {
+				max-height: 350px;
+			}
+			.collapsible-content .content-inner {
+				padding: 0.5rem 1rem;
+			}
+			.collapsible-content p {
+				margin-bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap-collabsible">
+			<input id="collapsible" class="toggle" type="checkbox" />
+			<label for="collapsible" class="lbl-toggle body-md bold color-user-secondary">More Info</label>
+			<div class="collapsible-content">
+				<div class="content-inner">
+					<p class="body-md">
+						Dispense into dry hands. Massage over dry face and eyes to dissolve surface oil and dirt. Concentrate on
+						areas of congestion or stubborn debris. Wet hands and continue massaging to create a light, milky emulsion.
+						Rinse with lukewarm water. Follow with prescribed Dermalogica Cleanser for professional cleansing results.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="wrap-collabsible">
+			<input id="collapsible2" class="toggle" type="checkbox" />
+			<label for="collapsible2" class="lbl-toggle body-md bold color-user-secondary">Ingredients</label>
+			<div class="collapsible-content">
+				<div class="content-inner">
+					<p class="body-md">
+						Key Ingredients: Borago fficinalis (borage seed): contains gamma linoleic acid (gla), a fatty acid that has
+						been widey used for treating inflammation, eczema, dehydration and redness.
+					</p>
+					<p class="body-md">
+						Prunus armeniaca (apricot) kernel: an excellent source of fatty acids, vitamin a and linoleic acid. oil
+						helps soothe irritation, nourish and moisturise. aleurites moluccana (kukui nut): a rich source of vitamins
+						a, c and e plus omega-3 fatty acids that help reinforce the barrier lipids of the stratum corneum. used to
+						treat skin disorders, dry skin, acne and irritation.
+					</p>
+					<p class="body-md">
+						Oryza sativa (rice bran): this oil is rich in oryzanol, 3 vitamins, phytic acid, antioxidants and
+						phytosterols that help inhbit oxidative skin damage, soften skin and facilitate skin repair.
+					</p>
+					<p class="body-md">
+						Helianthus annuus (sunflower seed) oil: a natural triglyceride, high in oleic acid, with excellent emollient
+						properties.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
